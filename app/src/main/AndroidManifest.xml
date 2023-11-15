@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" >
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -55,6 +59,13 @@
             android:parentActivityName=".ui.activity.AnimalActivity"
             />
         <activity
+            android:name=".ui.welcome.ChangePasswordActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.activity.UsersInforActivity"
             android:exported="false"
             android:parentActivityName=".ui.activity.UsersInforActivity" />
@@ -85,6 +96,44 @@
                 android:resource="@xml/paths_animal" />
         </provider>
 
+        <activity
+            android:name=".ui.welcome.WelcomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuanLyPet.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.welcome.SignupAdminActivity"
+            android:exported="false"
+            android:theme="@style/Theme.QuanLyPet" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.welcome.SignupUsersActivity"
+            android:exported="false"
+            android:theme="@style/Theme.QuanLyPet.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.welcome.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuanLyPet.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ui.activity.DoctorInforActivity"
             android:exported="false"
