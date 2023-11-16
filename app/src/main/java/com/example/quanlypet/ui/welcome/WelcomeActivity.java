@@ -59,6 +59,7 @@ public class WelcomeActivity extends AppCompatActivity {
 //            }
 //        });
 //    }
+    // thanhhh
     @Override
     protected void onDestroy() {
         super.onDestroy();
