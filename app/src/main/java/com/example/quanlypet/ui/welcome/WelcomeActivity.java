@@ -60,6 +60,7 @@ public class WelcomeActivity extends AppCompatActivity {
 //        });
 //    }
     // thanhhh
+    //Hoan đã ghé qua đây
     @Override
     protected void onDestroy() {
         super.onDestroy();
